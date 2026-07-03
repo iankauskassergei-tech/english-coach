@@ -1,0 +1,114 @@
+[
+  {
+    "title": "First Day at a Remote Job",
+    "level": "short",
+    "category": "remote-work",
+    "body": "Starting a new remote position can feel overwhelming. On your first day, you'll typically receive access to company tools like Slack, Jira, and Google Workspace. Your manager will schedule an onboarding call to introduce you to the team and explain your initial tasks. Don't worry if everything seems confusing at first — it takes about two weeks to feel comfortable with the workflow. The most important thing is to ask questions whenever you're unsure about something. Remote work requires strong asynchronous communication skills, so make sure to document your progress clearly.",
+    "vocabHighlights": ["onboarding", "asynchronous", "workflow", "overwhelming", "document"],
+    "questions": [
+      {"q": "How long does it typically take to feel comfortable?", "options": ["Two days", "Two weeks", "Two months", "One week"], "answer": 1},
+      {"q": "What skill is important for remote work?", "options": ["Speed typing", "Asynchronous communication", "Public speaking", "Programming"], "answer": 1},
+      {"q": "What should you do when unsure about something?", "options": ["Wait", "Ask questions", "Guess", "Ignore it"], "answer": 1}
+    ]
+  },
+  {
+    "title": "Writing Effective Support Tickets",
+    "level": "short",
+    "category": "customer-support",
+    "body": "A well-written support ticket saves time for both the customer and the support agent. Start with a clear, specific subject line that summarizes the issue. In the description, include steps to reproduce the problem, expected behavior, and actual behavior. Attach screenshots if possible. Always mention your operating system, browser version, and any error messages you received. Avoid vague descriptions like 'it doesn't work' — instead, be specific: 'The Save button returns a 500 error when I upload a file larger than 10MB.' This helps the support team diagnose and resolve the issue faster.",
+    "vocabHighlights": ["reproduce", "behavior", "diagnose", "resolve", "vague"],
+    "questions": [
+      {"q": "What makes a good subject line?", "options": ["It's long", "It summarizes the issue", "It's vague", "It asks a question"], "answer": 1},
+      {"q": "Why should you avoid 'it doesn't work'?", "options": ["It's rude", "It's too vague", "It's too technical", "It's too short"], "answer": 1}
+    ]
+  },
+  {
+    "title": "The Art of the Follow-Up Email",
+    "level": "intermediate",
+    "category": "email-writing",
+    "body": "Following up on unanswered emails is a delicate art. Wait at least 48 hours before sending a follow-up — people are busy and may need time to respond. Your follow-up should be brief and polite. Start by referencing your previous email: 'I wanted to follow up on my email from Monday regarding the Q3 budget review.' Then restate your request clearly and concisely. If you have a deadline, mention it: 'I would appreciate your feedback by Thursday so we can include it in our presentation.' End with a professional closing. Never express frustration or impatience, even if you've followed up multiple times. The goal is to be persistent without being annoying.",
+    "vocabHighlights": ["delicate", "concise", "persistent", "frustration", "appreciate"],
+    "questions": [
+      {"q": "How long should you wait before following up?", "options": ["1 hour", "24 hours", "48 hours", "1 week"], "answer": 2},
+      {"q": "What should you avoid in follow-up emails?", "options": ["Being brief", "Expressing frustration", "Mentioning deadlines", "Being polite"], "answer": 1},
+      {"q": "What is the goal of a follow-up?", "options": ["To annoy", "To be persistent without being annoying", "To demand", "To threaten"], "answer": 1}
+    ]
+  },
+  {
+    "title": "Understanding SaaS Metrics",
+    "level": "business",
+    "category": "saas-terminology",
+    "body": "SaaS companies track several key metrics to measure business health. Monthly Recurring Revenue (MRR) is the predictable income from subscriptions each month. Customer Acquisition Cost (CAC) measures how much it costs to acquire a new customer. Churn rate indicates the percentage of customers who cancel their subscriptions. Lifetime Value (LTV) estimates the total revenue a customer will generate over their entire relationship with the company. A healthy SaaS business typically has an LTV to CAC ratio of 3:1 or higher. Net Revenue Retention (NRR) measures revenue growth from existing customers, including upsells and expansions minus churn.",
+    "vocabHighlights": ["recurring", "acquisition", "churn", "lifetime value", "upsells", "retention"],
+    "questions": [
+      {"q": "What does MRR stand for?", "options": ["Monthly Revenue Rate", "Monthly Recurring Revenue", "Maximum Revenue Ratio", "Monthly Return Rate"], "answer": 1},
+      {"q": "What is a healthy LTV to CAC ratio?", "options": ["1:1", "2:1", "3:1", "5:1"], "answer": 2}
+    ]
+  },
+  {
+    "title": "Dealing with Difficult Customers",
+    "level": "intermediate",
+    "category": "customer-support",
+    "body": "Handling difficult customers is an essential skill in customer support. The first step is to remain calm and empathetic. Acknowledge the customer's frustration: 'I understand how frustrating this must be.' Listen actively without interrupting. Once you understand the issue, take ownership: 'I'll personally make sure this gets resolved.' Avoid blaming other departments or making excuses. If you can't resolve the issue immediately, provide a clear timeline: 'I'll have an update for you within 24 hours.' Always follow through on your promises. Remember, a customer who had a problem resolved effectively often becomes more loyal than one who never had a problem.",
+    "vocabHighlights": ["empathetic", "frustration", "ownership", "timeline", "loyal", "resolved"],
+    "questions": [
+      {"q": "What is the first step when handling difficult customers?", "options": ["Argue back", "Remain calm and empathetic", "Transfer the call", "Hang up"], "answer": 1},
+      {"q": "What can make a customer more loyal?", "options": ["Discounts", "Having a problem resolved effectively", "Ignoring them", "Free products"], "answer": 1}
+    ]
+  },
+  {
+    "title": "Agile Methodology Basics",
+    "level": "intermediate",
+    "category": "project-management",
+    "body": "Agile is a project management methodology that emphasizes iterative development and continuous feedback. Instead of planning the entire project upfront, Agile teams work in short cycles called sprints, typically lasting 1-4 weeks. Each sprint delivers a working increment of the product. Daily standup meetings keep the team aligned — each member shares what they did yesterday, what they'll do today, and any blockers they face. At the end of each sprint, the team conducts a sprint review to demonstrate completed work and a retrospective to discuss improvements. Popular Agile frameworks include Scrum, Kanban, and Extreme Programming (XP).",
+    "vocabHighlights": ["iterative", "increment", "standup", "blockers", "retrospective", "frameworks"],
+    "questions": [
+      {"q": "How long does a typical sprint last?", "options": ["1 day", "1-4 weeks", "3 months", "1 year"], "answer": 1},
+      {"q": "What happens in a daily standup?", "options": ["Code review", "Each member shares status", "Sprint planning", "Demo"], "answer": 1}
+    ]
+  },
+  {
+    "title": "Cross-Cultural Communication in Remote Teams",
+    "level": "business",
+    "category": "remote-work",
+    "body": "Working in international remote teams requires cultural awareness and communication skills. Different cultures have varying expectations about directness, hierarchy, and feedback. For example, some cultures prefer direct feedback ('This design doesn't work'), while others favor indirect communication ('Perhaps we could explore some alternatives'). Time zones add another layer of complexity — be mindful of scheduling meetings that work for all participants. Use clear, simple language and avoid idioms that may not translate well. Document decisions in writing to ensure everyone has access to the same information. When in doubt, ask for clarification rather than making assumptions about what a colleague means.",
+    "vocabHighlights": ["awareness", "directness", "hierarchy", "indirect", "mindful", "clarification"],
+    "questions": [
+      {"q": "Why should you avoid idioms in international teams?", "options": ["They're too simple", "They may not translate well", "They're too formal", "They're rude"], "answer": 1},
+      {"q": "What should you do when in doubt?", "options": ["Make assumptions", "Ask for clarification", "Ignore it", "Guess"], "answer": 1}
+    ]
+  },
+  {
+    "title": "Effective Code Review Practices",
+    "level": "intermediate",
+    "category": "project-management",
+    "body": "Code review is a critical practice for maintaining code quality. When reviewing code, focus on logic errors, security vulnerabilities, and adherence to coding standards rather than style preferences. Provide constructive feedback: instead of 'This is wrong,' try 'Consider using a Map here for better performance — the current approach has O(n) lookup time.' Be specific about what needs to change and why. If the code is good, say so — positive feedback is just as important as constructive criticism. Review in small batches to avoid fatigue and ensure thoroughness. Remember that code review is a learning opportunity for both the reviewer and the author.",
+    "vocabHighlights": ["vulnerabilities", "adherence", "constructive", "thoroughness", "fatigue"],
+    "questions": [
+      {"q": "What should code review focus on?", "options": ["Style only", "Logic errors and security", "Personal preferences", "Line count"], "answer": 1},
+      {"q": "Why should you review in small batches?", "options": ["To finish faster", "To avoid fatigue", "To skip reviews", "To be less thorough"], "answer": 1}
+    ]
+  },
+  {
+    "title": "Time Management for Remote Workers",
+    "level": "short",
+    "category": "remote-work",
+    "body": "Time management is crucial for remote workers who don't have the structure of an office environment. Start by establishing a consistent routine — wake up at the same time, get dressed, and create a dedicated workspace. Use time-blocking to schedule your day: allocate specific hours for focused work, meetings, and breaks. The Pomodoro Technique — working for 25 minutes followed by a 5-minute break — can help maintain focus. Set clear boundaries between work and personal time to avoid burnout. At the end of each day, plan tomorrow's priorities so you can start productively.",
+    "vocabHighlights": ["consistent", "time-blocking", "allocate", "boundaries", "burnout", "priorities"],
+    "questions": [
+      {"q": "What is the Pomodoro Technique?", "options": ["Working 8 hours straight", "25 min work + 5 min break", "Working at night", "No breaks"], "answer": 1},
+      {"q": "Why are boundaries important for remote workers?", "options": ["To work more", "To avoid burnout", "To impress the boss", "To save money"], "answer": 1}
+    ]
+  },
+  {
+    "title": "Negotiating Your Salary",
+    "level": "business",
+    "category": "business-communication",
+    "body": "Salary negotiation is a skill that can significantly impact your career earnings. Before negotiating, research market rates for your position using sites like Glassdoor, Levels.fyi, and LinkedIn Salary. Prepare a list of your accomplishments and the value you bring to the company. When discussing compensation, use a range rather than a single number, and anchor high. For example: 'Based on my research and experience, I'm looking for a range of $90,000 to $110,000.' Be prepared to discuss benefits, equity, and other non-salary compensation. If the offer is below your expectations, don't reject it immediately — ask for time to consider and come back with a counter-offer. Always maintain a professional and collaborative tone.",
+    "vocabHighlights": ["accomplishments", "anchor", "compensation", "equity", "counter-offer", "collaborative"],
+    "questions": [
+      {"q": "What should you do before negotiating?", "options": ["Accept any offer", "Research market rates", "Quit your job", "Wait for the employer"], "answer": 1},
+      {"q": "How should you present your salary expectations?", "options": ["A single number", "A range anchored high", "Don't mention salary", "Ask for minimum wage"], "answer": 1}
+    ]
+  }
+]

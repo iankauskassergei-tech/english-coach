@@ -1,0 +1,82 @@
+[
+  {
+    "type": "client-reply",
+    "scenario": "Customer reports a billing error and requests refund",
+    "prompt": "A customer named Sarah writes: 'I was charged twice for my subscription this month. I need a refund immediately.' Write a professional reply.",
+    "context": "You are a support agent at a SaaS company. Company policy allows refunds within 30 days.",
+    "checklist": ["Acknowledge the issue empathetically", "Confirm you will investigate", "Provide a timeline for resolution", "Offer a direct contact for follow-up", "Professional but warm tone"],
+    "sample": "Hi Sarah,\n\nThank you for reaching out, and I sincerely apologize for the double charge. I understand how frustrating this must be.\n\nI've escalated your case to our billing team and we'll have this resolved within 24 hours. You'll receive a confirmation email once the refund has been processed.\n\nIf you have any other questions, please don't hesitate to reach out directly.\n\nBest regards,\n[Your Name]"
+  },
+  {
+    "type": "support-ticket",
+    "scenario": "User cannot log into their account after password reset",
+    "prompt": "A user reports: 'I reset my password but still can't log in. The system says my credentials are invalid.' Write a support response.",
+    "context": "You work at a SaaS company. The user has an active subscription.",
+    "checklist": ["Acknowledge the issue", "Provide clear troubleshooting steps", "Offer alternative solutions", "Set expectations for resolution time", "Maintain helpful tone"],
+    "sample": "Hi,\n\nI'm sorry to hear you're having trouble logging in after resetting your password. Let me help you resolve this.\n\nCould you please try the following steps:\n1. Clear your browser cache and cookies\n2. Try logging in using an incognito/private window\n3. Make sure there are no extra spaces in your email or password\n\nIf these steps don't work, I can manually reset your account. Please let me know and I'll have it done within the hour.\n\nBest regards,\n[Your Name]"
+  },
+  {
+    "type": "internal-update",
+    "scenario": "Weekly status update for the engineering team",
+    "prompt": "Write a weekly status update covering: completed tasks, in-progress work, blockers, and next week's priorities.",
+    "context": "You are a project coordinator sharing updates with the engineering team.",
+    "checklist": ["Use clear headers for each section", "Be specific about task status", "Highlight blockers with proposed solutions", "Include timeline for key deliverables", "Keep it concise"],
+    "sample": "Weekly Status Update — Week of Jan 15\n\nCompleted:\n- User authentication flow (PR #234 merged)\n- Database migration to PostgreSQL 15\n- API documentation for v2 endpoints\n\nIn Progress:\n- Payment integration (70% complete, ETA: Jan 18)\n- Performance optimization for dashboard (40% complete)\n\nBlockers:\n- Waiting for design approval on new settings page (pinged @design-team today)\n\nNext Week:\n- Complete payment integration\n- Begin mobile app testing\n- Sprint retrospective on Friday"
+  },
+  {
+    "type": "email",
+    "scenario": "Following up on an unanswered proposal",
+    "prompt": "You sent a business proposal to a potential client 5 days ago and haven't received a response. Write a follow-up email.",
+    "context": "The proposal was for a 6-month consulting engagement worth $50,000.",
+    "checklist": ["Reference the original proposal", "Keep it brief and polite", "Add value or new information", "Include a clear call to action", "Don't be pushy"],
+    "sample": "Subject: Following Up — Proposal for Q2 Engagement\n\nHi [Name],\n\nI hope this email finds you well. I wanted to follow up on the proposal I sent last Tuesday regarding our consulting engagement for Q2.\n\nSince then, we've completed a similar project with [Client X] that resulted in a 35% improvement in their operational efficiency. I'd be happy to share the case study if you're interested.\n\nWould you have 15 minutes this week to discuss any questions you might have?\n\nBest regards,\n[Your Name]"
+  },
+  {
+    "type": "client-reply",
+    "scenario": "Customer unhappy with product downtime",
+    "prompt": "A customer writes: 'Your service has been down for 3 hours now. This is unacceptable. I'm considering switching to a competitor.' Write a response.",
+    "context": "There was an unplanned outage due to a database issue.",
+    "checklist": ["Apologize sincerely", "Explain what happened (briefly)", "Share what you're doing to fix it", "Offer compensation if applicable", "Reassure about future reliability"],
+    "sample": "Hi [Name],\n\nI completely understand your frustration, and I sincerely apologize for the extended downtime. This is not the level of service we aim to provide.\n\nWe experienced a database issue that our engineering team has been actively working to resolve. I'm happy to report that service is being restored now.\n\nTo make up for this disruption, we'll be extending your subscription by 5 days at no additional cost. We're also implementing additional monitoring to prevent similar issues in the future.\n\nThank you for your patience, and please don't hesitate to reach out if you experience any further issues.\n\nBest regards,\n[Your Name]"
+  },
+  {
+    "type": "support-ticket",
+    "scenario": "Feature request from a customer",
+    "prompt": "A customer writes: 'I wish your product had a bulk export feature. I need to export 500+ records at once and the current limit is 50.' Write a response.",
+    "context": "The feature is on the roadmap but not yet scheduled.",
+    "checklist": ["Thank the customer for feedback", "Acknowledge the use case", "Share that it's on the roadmap", "Provide a workaround if possible", "Keep them updated"],
+    "sample": "Hi [Name],\n\nThank you for taking the time to share this feedback — bulk export is actually one of our most requested features, and it's on our product roadmap.\n\nWhile I can't provide an exact timeline yet, I've added your vote to the feature request. In the meantime, you can use our API to export larger datasets programmatically. I can connect you with our technical team if you'd like help setting this up.\n\nI'll make sure to notify you as soon as bulk export becomes available.\n\nBest regards,\n[Your Name]"
+  },
+  {
+    "type": "internal-update",
+    "scenario": "Incident report after a production outage",
+    "prompt": "Write an incident report for a 2-hour production outage caused by a failed deployment.",
+    "context": "The deployment introduced a bug that caused the API to return 500 errors. Rollback took 45 minutes.",
+    "checklist": ["Summarize what happened", "Include timeline of events", "Identify root cause", "List corrective actions", "Preventive measures for the future"],
+    "sample": "Incident Report — Production Outage (Jan 15)\n\nSummary:\nA deployment at 14:30 UTC introduced a bug that caused API 500 errors for 2 hours.\n\nTimeline:\n- 14:30: Deployment initiated\n- 14:35: 500 errors detected by monitoring\n- 14:40: On-call engineer notified\n- 15:00: Root cause identified (database migration script)\n- 15:15: Rollback initiated\n- 15:30: Service restored\n\nRoot Cause:\nThe migration script referenced a column that hadn't been created yet.\n\nCorrective Actions:\n- Added migration validation to CI pipeline\n- Implemented staged rollouts for database changes\n- Updated runbook with new rollback procedures"
+  },
+  {
+    "type": "email",
+    "scenario": "Introducing yourself to a new team",
+    "prompt": "You've just joined a new company as a Customer Success Manager. Write an introduction email to the team.",
+    "context": "You're joining a remote team of 12 people across 4 time zones.",
+    "checklist": ["Brief personal introduction", "Professional background", "What you're excited about", "How to reach you", "Friendly and approachable tone"],
+    "sample": "Subject: Hello from the new Customer Success Manager!\n\nHi everyone,\n\nI'm [Your Name], and I'm thrilled to be joining the team as your new Customer Success Manager. I'll be working from the Moscow time zone (UTC+3).\n\nA bit about me: I've spent the last 5 years in customer-facing roles at SaaS companies, most recently at [Previous Company] where I managed a portfolio of 50+ enterprise accounts. I'm passionate about building long-term customer relationships and helping teams get the most out of their tools.\n\nI'm excited to learn from all of you and contribute to our shared success. Feel free to reach out on Slack or schedule a coffee chat — I'd love to get to know each of you!\n\nLooking forward to working together,\n[Your Name]"
+  },
+  {
+    "type": "client-reply",
+    "scenario": "Customer asking for a discount",
+    "prompt": "A customer writes: 'We've been with you for 2 years. Can we get a discount on our renewal?' Write a response.",
+    "context": "Company offers loyalty discounts for long-term customers (up to 15%).",
+    "checklist": ["Thank them for their loyalty", "Acknowledge their tenure", "Offer a specific discount", "Highlight value they've received", "Encourage renewal"],
+    "sample": "Hi [Name],\n\nThank you for being a valued customer for the past 2 years — we truly appreciate your continued partnership.\n\nAs a token of our appreciation, I'm happy to offer you a 15% discount on your annual renewal. This brings your total to $[amount] for the year.\n\nOver the past year, your team has [specific value — e.g., 'processed over 10,000 tickets using our platform']. We're committed to continuing to deliver that value.\n\nShall I proceed with applying the discount to your renewal?\n\nBest regards,\n[Your Name]"
+  },
+  {
+    "type": "support-ticket",
+    "scenario": "Customer reporting a security concern",
+    "prompt": "A customer writes: 'I noticed that my data might be accessible to other users. This is a serious security concern.' Write a response.",
+    "context": "This requires immediate escalation to the security team.",
+    "checklist": ["Take the concern seriously", "Escalate immediately", "Provide immediate reassurance", "Set clear expectations", "Follow up promptly"],
+    "sample": "Hi [Name],\n\nThank you for bringing this to our attention — we take security concerns very seriously.\n\nI've immediately escalated your report to our security team for investigation. They will review the issue within the next 2 hours.\n\nIn the meantime, I recommend changing your password as a precautionary measure. I'll personally follow up with you as soon as our security team provides an update.\n\nYour security is our top priority, and I appreciate you reporting this.\n\nBest regards,\n[Your Name]"
+  }
+]
