@@ -1,33 +1,25 @@
+import { neon } from '@neondatabase/serverless';
 import Database from 'better-sqlite3';
 import path from 'path';
-import { initSchema } from './schema';
 
 const isVercel = Boolean(process.env.VERCEL);
 
-let db: Database.Database | undefined;
+// Если есть URL базы, используем его, иначе null
+const sql = isVercel && process.env.DATABASE_URL ? neon(process.env.DATABASE_URL) : null;
 
-function createDatabase(): Database.Database {
-  const database = isVercel
-    ? new Database(':memory:')
-    : new Database(path.join(process.cwd(), 'data', 'app.db'));
-
-  database.pragma('journal_mode = WAL');
-  database.pragma('foreign_keys = ON');
-
-  if (isVercel) {
-    initSchema(database);
+export function getDb() {
+  if (isVercel && sql) {
+    return {
+      prepare: (query: string) => ({
+        get: async (params?: any) => {
+          const result = await sql(query, params ? [params] : []);
+          return result[0];
+        },
+        all: async (params?: any) => await sql(query, params ? [params] : []),
+      }),
+    };
+  } else {
+    // Твой локальный SQLite
+    return new Database(path.join(process.cwd(), 'data', 'app.db'));
   }
-
-  return database;
-}
-
-export function isVercelDbStub(): boolean {
-  return isVercel;
-}
-
-export function getDb(): Database.Database {
-  if (!db) {
-    db = createDatabase();
-  }
-  return db;
 }

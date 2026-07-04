@@ -8,24 +8,35 @@ import { Header } from '@/components/layout/header';
 
 export const dynamic = 'force-dynamic';
 
-export default function DashboardPage() {
-  const db = getDb();
+export default async function DashboardPage() {
+  const db = getDb(); // Убедились, что она тут
 
-  const totalWords = (db.prepare('SELECT COUNT(*) as c FROM words').get() as { c: number }).c;
-  const mastered = (db.prepare("SELECT COUNT(*) as c FROM reviews WHERE state = 'mastered'").get() as { c: number }).c;
-  const dueNow = (db.prepare("SELECT COUNT(*) as c FROM reviews WHERE next_review <= datetime('now') AND state != 'new'").get() as { c: number }).c;
+  // Проверка на случай, если db вернулся пустым
+  if (!db) {
+    return <div>Ошибка: база данных не инициализирована</div>;
+  }
+
+  const totalWordsResult = await db.prepare('SELECT COUNT(*) as c FROM words').get();
+  const totalWords = (totalWordsResult as any)?.c || 0;
+
+  const masteredResult = await db.prepare("SELECT COUNT(*) as c FROM reviews WHERE state = 'mastered'").get();
+  const mastered = (masteredResult as any)?.c || 0;
+
+  // Используем SQLite синтаксис, который понятен и для SQLite, и (в большинстве случаев) для Postgres
+  const dueNowResult = await db.prepare("SELECT COUNT(*) as c FROM reviews WHERE next_review <= datetime('now') AND state != 'new'").get();
+  const dueNow = (dueNowResult as any)?.c || 0;
 
   const today = new Date().toISOString().split('T')[0];
-  const todaySession = db.prepare('SELECT * FROM study_sessions WHERE date = ?').get(today) as any;
+  const todaySession = await db.prepare('SELECT * FROM study_sessions WHERE date = ?').get(today) as any;
 
-  const weeklyData = db.prepare(
+  const weeklyData = await db.prepare(
     "SELECT date, reviews_done FROM study_sessions WHERE date >= date('now', '-7 days') ORDER BY date"
   ).all() as { date: string; reviews_done: number }[];
 
-  const allSessions = db.prepare('SELECT date FROM study_sessions ORDER BY date DESC').all() as { date: string }[];
+  const allSessions = await db.prepare('SELECT date FROM study_sessions ORDER BY date DESC').all() as { date: string }[];
 
   let streak = 0;
-  if (allSessions.length > 0) {
+  if (allSessions && allSessions.length > 0) {
     const dates = allSessions.map((s) => s.date);
     streak = 1;
     for (let i = 0; i < dates.length - 1; i++) {
@@ -37,19 +48,17 @@ export default function DashboardPage() {
     }
   }
 
-  const settings = db.prepare("SELECT value FROM settings WHERE key = 'daily_goal'").get() as { value: string } | undefined;
+  const settings = await db.prepare("SELECT value FROM settings WHERE key = 'daily_goal'").get() as { value: string } | undefined;
   const dailyGoal = settings ? parseInt(settings.value) : 20;
 
   return (
     <div>
       <Header title="Dashboard" subtitle="Track your learning progress" />
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <StreakCard streak={streak} />
         <GoalTracker current={todaySession?.reviews_done || 0} goal={dailyGoal} />
         <DueReviews count={dueNow} />
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <StatsGrid
           totalWords={totalWords}
