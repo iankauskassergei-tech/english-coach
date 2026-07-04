@@ -22,17 +22,10 @@ const CONVERSATION_TOPICS = [
   'If you could change one thing about how teams collaborate remotely, what would it be?',
 ];
 
-type SpeechRecognitionConstructor = new () => SpeechRecognition;
-
 function getSpeechRecognition(): SpeechRecognitionConstructor | null {
   if (typeof window === 'undefined') return null;
 
-  const win = window as Window & {
-    SpeechRecognition?: SpeechRecognitionConstructor;
-    webkitSpeechRecognition?: SpeechRecognitionConstructor;
-  };
-
-  return win.SpeechRecognition ?? win.webkitSpeechRecognition ?? null;
+  return window.SpeechRecognition ?? window.webkitSpeechRecognition ?? null;
 }
 
 function pickRandomTopic(exclude?: string): string {
